@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>List of objects</title> 
+    <link rel="stylesheet" href="/style/css/ListObject.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>List :</h1>
+    <table>
+        <tr th:if="${objects.empty}">
+            <td>No object in list ...</td>
+        </tr>
+        <tr th:each="object : ${objects}">
+            <td th:text="${object.name}"></td>
+        </tr>
+</table>
+</body>
+</html>
